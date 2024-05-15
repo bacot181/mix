@@ -1,0 +1,68 @@
+{
+    "name": "Mix UserBot",
+    "description": "Mix Userbot Dibuat Untuk String Pyrogram Untuk ID 5 Pasti Aman.",
+    "logo": "https://telegra.ph//file/19b336da463a05d7d8f8c.jpg",
+    "keywords": [
+        "Pyrogram",
+        "Userbot"
+    ],
+    "repository": "https://github.com/naya1503/Mix-Userbot",
+    "success_url": "https://t.me/kenapanan",
+    "stack": "container",
+    "env": {
+        "api_id": {
+            "description": "Au ya cek my.telegram.org",
+            "required": true
+        },
+        "api_hash": {
+            "description": "Au ya cek my.telegram.org",
+            "required": true
+        },
+        "session": {
+            "description": "Silakan isi Pyrogram V2",
+            "required": true
+        },
+        "mongo_uri": {
+            "description": "Silakan isi Mongo Db/Mongo Url . Jika Build Redis Gagal . Cara ambil nya ketik #mongo di @kynansupport.",
+            "required": true
+        },
+        "db_name": {
+            "description": "Silakan isi DB_NAME. Isi aja : MixDB",
+            "required": true
+        },
+        "heroku_api": {
+            "description": "Isi Coy Jan Dikosongin.",
+            "required": true
+        },
+        "heroku_app_name": {
+            "description": "Isi Coy Jan Dikosongin",
+            "required": true
+        },
+        "hostname": {
+            "description": "Isi Coy Jan Dikosongin.",
+            "required": true
+        },
+        "port": {
+            "description": "Isi Coy Jan Dikosongin",
+            "required": true
+        },
+        "scheme": {
+            "description": "Isi Coy Jan Dikosongin",
+            "required": true
+        }
+    },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "basic"
+        }
+    }
+}
