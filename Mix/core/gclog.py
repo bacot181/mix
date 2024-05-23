@@ -61,3 +61,13 @@ async def check_logger():
         return
 
 
+async def getFinish():
+    emut = await nlx.get_prefix(nlx.me.id)
+    xx = " ".join(emut)
+    try:
+        await bot.send_message(f"ya")
+
+        except:
+            ndB.del_key("TAG_LOG")
+            execvp(executable, [executable, "-m", "Mix"])
+         
