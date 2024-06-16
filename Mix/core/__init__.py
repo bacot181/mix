@@ -8,3 +8,4 @@ from .newdb import *
 from .pastebin import *
 from .regex_tools import *
 from .tools_anim import *
+from .dmdb import *
