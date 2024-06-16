@@ -62,12 +62,12 @@ async def check_dmutes(c, m):
         await m.reply_text(f"Error: {e}")
         logger.error(f"Error in check_dmutes: {e}")
 
-@ky.ubot(filters.chat(chat_id)
-async def delete_m(c, m):
+@ky.ubot(filters.chat(chat_id))
+async def delete_m(c: nlx, m):
     try:
         dmute_list = await get_all_dmute()
         if str(m.from_user.id) in dmute_list:
             await c.delete_messages(chat_id=m.chat.id, m_ids=[m.m_id])
-            logger.info(f"Deleted message from user ID {message.from_user.id} in chat {message.chat.id}.")
+            logger.info(f"Deleted message from user ID {m.from_user.id} in chat {m.chat.id}.")
     except Exception as e:
         logger.error(f"Error deleting message: {e}")
