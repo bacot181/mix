@@ -12,7 +12,7 @@ __help__ = """
 • Penjelasan: Untuk melihat.
 """
 
-chat_id = []
+chat_id = [-1002063525539]
 
 
 @ky.ubot("ad", sudo=True)
@@ -63,7 +63,7 @@ async def check_dmutes(c, m):
         logger.error(f"Error in check_dmutes: {e}")
 
 @ky.ubot(filters.chat(chat_id)
-async def delete_messages(c, m):
+async def delete_m(c, m):
     try:
         dmute_list = await get_all_dmute()
         if str(message.from_user.id) in dmute_list:
