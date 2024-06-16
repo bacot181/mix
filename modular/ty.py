@@ -2,7 +2,7 @@ import os
 import logging
 import asyncio
 from pyrogram import Client, filters, idle
-from pyrogram.errors import Floodwait 
+
 from Mix import *
 
 __modles__ = "tesy"
