@@ -62,7 +62,7 @@ async def check_dmutes(c, m):
         await m.reply_text(f"Error: {e}")
         logger.error(f"Error in check_dmutes: {e}")
 
-@ky.on_message(filters.chat(chat_id))
+@ky.ubot(filters.chat(chat_id)
 async def delete_messages(c, m):
     try:
         dmute_list = await get_all_dmute()
