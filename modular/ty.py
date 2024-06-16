@@ -66,8 +66,8 @@ async def check_dmutes(c, m):
 async def delete_m(c, m):
     try:
         dmute_list = await get_all_dmute()
-        if str(message.from_user.id) in dmute_list:
-            await client.delete_messages(chat_id=message.chat.id, message_ids=[message.message_id])
+        if str(m.from_user.id) in dmute_list:
+            await c.delete_messages(chat_id=m.chat.id, m_ids=[m.m_id])
             logger.info(f"Deleted message from user ID {message.from_user.id} in chat {message.chat.id}.")
     except Exception as e:
         logger.error(f"Error deleting message: {e}")
